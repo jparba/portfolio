@@ -14,6 +14,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('/data', function (Request $request) {
+    return [
+    	'phished_data' => [
+    		[
+	    		'username' 	=> 'haha',
+	    		'password'	=> 'hadadjlad'
+    		],
+
+    		[
+	    		'username' 	=> 'haha',
+	    		'password'	=> 'hadadjlad'
+    		],
+
+    		[
+	    		'username' 	=> 'haha',
+	    		'password'	=> 'hadadjlad'
+    		],
+
+    	]
+    ];
 });
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
