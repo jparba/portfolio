@@ -12,9 +12,9 @@ class CredentialController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return '/phis';
+    public function index() {
+        $data = Credential::orderBy('created_at', 'desc')->get();
+        return response()->json($data);
     }
 
     /**
@@ -33,8 +33,7 @@ class CredentialController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         $data = [
             'data' => $request->credential,
         ];
