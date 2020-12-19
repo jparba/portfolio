@@ -35,6 +35,8 @@ Route::get('/data', function (Request $request) {
     	]
     ];
 });
+
+Route::resource('/phis', 'CredentialController');
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
